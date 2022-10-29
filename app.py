@@ -25,7 +25,7 @@ def logen():
     records = list(cursor.fetchall())
     if len(records) == 0 and (len(username)>=1 or len(password) >=1) :
         return render_template('Not user in db.html'), print(records,password,username)
-    elif len(records) == 0:
+    elif len(username) == 0 and len(password) ==0:
         return render_template('zero.html'),print(records,password,username)
     else:
         return render_template('account.html',full_name=records[0][1],login=records[0][2],password=records[0][3]),print(records,password,username)
