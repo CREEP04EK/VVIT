@@ -16,4 +16,4 @@ for i in data['list']:
           i['visibility'], "> \r\nПогодные условия <",
           i['weather'][0]['description'], ">")
 
-    print("____________________________")
+    print("_"*20)
